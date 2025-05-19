@@ -11,7 +11,7 @@ const SECRET_KEY = 'clave_secreta'; // <-- debe coincidir con el otro servicio
 
 app.use(cors());
 app.use(bodyParser.json());
-
+app.use(express.json());
 app.post('/login', (req, res) => {
   const { username, password } = req.body;
   const user = users.find(u => u.username === username);
